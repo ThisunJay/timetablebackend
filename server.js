@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 
 const env = require('dotenv');
 
@@ -40,7 +40,7 @@ const dbConfig = require("./config/db.config");
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(morgan("dev"));
+// app.use(morgan("dev"));
 
 mongoose.set("useCreateIndex", true);
 
